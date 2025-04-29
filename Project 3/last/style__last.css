@@ -1,0 +1,135 @@
+.main, .btn-elem {
+    user-select: none;
+    -webkit-user-select: none; /* Для WebKit браузеров (Chrome, Safari) */
+    -moz-user-select: none;    /* Для Firefox */
+    -ms-user-select: none;     /* Для Internet Explorer и Edge */
+}
+
+
+/* Основа макета */
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 295px;
+    height: 568px;
+    background: #090909;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+}
+
+/* Счётчик */
+
+.input-block {
+    background: #1E1E1E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    width: 295px;
+    height: 139px;
+    border-bottom: #fff 1px solid;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    border-radius: 4px;
+    padding-top: 17px;
+}
+
+#numberInput {
+    width: 100%;
+    display: flex;
+    border: none;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Убираем стрелки в Firefox */
+    -webkit-appearance: none;  /* Убираем стрелки в WebKit браузерах (Chrome, Safari) */
+    appearance: none; /* Убираем стрелки в других браузерах */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Убираем отступы */
+}   
+
+.input {
+    color: #fff;
+    font-size: 40px;
+    margin-right: 24px;
+    margin-bottom: 5px;
+}
+
+/* Кнопки */
+.func-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 31px;
+    margin-left: 15px;
+    margin-right: 17px;
+    margin-top: 17px;
+}
+
+.delete{
+    width: 50px;
+    height: 50px;
+    transform: rotate(3.142rad);
+}
+
+.btn-elem {
+    width: 41px;
+    height: 50px;
+    
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.special {
+    font-size: 16px;
+}
+
+.multiply {
+    font-size: 10px;
+}
+
+.minus {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-elem {
+    width: 41px;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn-elem:hover {
+    transform: scale(1.15);
+    background-color: #333; /* Темнее цвет */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для современного вида */
+}
+
+/* Добавим плавный переход цвета для интерактивности */
+.btn-elem:active {
+    transform: scale(1.05);
+    background-color: #444; /* Еще темнее при нажатии */
+}
